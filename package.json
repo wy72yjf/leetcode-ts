@@ -1,0 +1,28 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "leetcode ts",
+  "author": "Sorens",
+  "scripts": {
+    "lint": "eslint --ext .ts, code",
+    "test": "jest ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wy72yjf/leetcode-ts.git"
+  },
+  "keywords": [
+    "leetcode",
+    "ts"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "24.0.15",
+    "@typescript-eslint/eslint-plugin": "1.12.0",
+    "@typescript-eslint/parser": "1.12.0",
+    "eslint": "5.16.0",
+    "jest": "24.8.0",
+    "ts-jest": "24.0.2",
+    "typescript": "3.5.3"
+  }
+}
