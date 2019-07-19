@@ -1,4 +1,4 @@
-# leetcode 算法 ts 版
+# leetcode ts 版
 
 ## 安装依赖
 ```
