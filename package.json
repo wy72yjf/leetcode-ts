@@ -4,7 +4,7 @@
   "description": "leetcode ts",
   "author": "Sorens",
   "scripts": {
-    "lint": "eslint --ext .ts, code",
+    "lint": "eslint --ext .js,.ts code",
     "test": "jest ./test"
   },
   "repository": {
