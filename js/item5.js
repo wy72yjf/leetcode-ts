@@ -33,8 +33,6 @@ function longestPalindrome(s) {
                 if (s[i] === s[j]) {
                     dp[i][j] = true;
                 }
-            } else if (j == i) {
-                dp[i][j] = true;
             }
             if (dp[i][j] && max < (j - i + 1)) {
                 max = j - i + 1;
@@ -45,5 +43,43 @@ function longestPalindrome(s) {
     return result
 }
 
-let result = longestPalindrome("babad");
+// let result = longestPalindrome("babad");
+// console.log(result);
+
+/** 
+ * 马拉车算法
+ * 参考地址： https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zhong-xin-kuo-san-dong-tai-gui-hua-by-liweiwei1419/
+*/
+
+
+function centerSpread(s, center) {
+    let len = s.length;
+    let i = center - 1;
+    let j = center + 1;
+    let step = 0;
+    while (i >= 0 && j < len && s[i] === s[j]) {
+        i--;
+        j++;
+        step++;
+    }
+    return step;
+}
+function longestPalindrome2(s) {
+    if(s.length <= 1) {
+        return s;
+    }
+    let s2 = '#' + s.split('').join('#') + '#';
+    let sLen = s2.length;
+    let maxLen = 1;
+    for (let i = 0; i < sLen; i++) {
+        let curP = centerSpread(s2, i);
+        if (curP > maxLen) {
+            maxLen = curP;
+            start = Math.floor((i - maxLen) / 2);
+        }
+    }
+    return s.substring(start, start + maxLen);
+}
+
+let result = longestPalindrome2('cbbd');
 console.log(result);
