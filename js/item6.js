@@ -1,6 +1,6 @@
 /** 
  * 按照z字进行字符串打印
- * 在向下的过程中行号增加， 拐点向上后 行号减小  向下的长度等于row 斜向上的长度等于row
+ * 在向下的过程中行号增加， 拐点向上后 行号减小; 向下的长度等于row 斜向上的长度等于row
  * 参考地址： https://leetcode-cn.com/problems/zigzag-conversion/solution/zzi-xing-bian-huan-by-jyd/
 */
 
