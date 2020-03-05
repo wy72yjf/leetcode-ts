@@ -34,7 +34,7 @@ function isPalindrome2(x) {
     rever = rever * 10 + x % 10;
     x = Math.floor(x/10);
   }
-  return x === rever || x === Math.floor(rever/ 10);
+  return x === rever || x === Math.floor(rever/ 10);  // 折半是数字长度为奇数
 }
 
 console.log(isPalindrome2(1001));
